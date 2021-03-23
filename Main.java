@@ -22,7 +22,6 @@ public class Main {
                     show.println("\n");
 
 
-
                     Pausa.pausar();
                     limpiarPantalla();
                     break;
