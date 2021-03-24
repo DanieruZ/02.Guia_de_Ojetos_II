@@ -1,7 +1,9 @@
 package guia_02;
 
 import java.io.PrintStream;
+import java.util.Arrays;
 import java.util.Scanner;
+
 
 public class Main {
 
@@ -21,6 +23,35 @@ public class Main {
                     show.println("  -------------------");
                     show.println("\n");
 
+                    Autor autor = new Autor("Joshua", "Bloch", "joshua@email.com", 'M');
+
+                    Autor[] autores = new Autor[3];
+                    autores[0] = autor;
+
+                    show.print(autor);
+                    show.println("\n");
+
+                    Libro libro = new Libro("Effective Java", 450, 150, autores);
+
+                    show.println(libro);
+                    show.println("\n");
+
+                    libro.setPrecio(500);
+                    libro.setStock(libro.getStock() + 50);
+
+                    show.println(Arrays.toString(libro.getAutor()));
+                    show.println("\n");
+
+                    show.println(libro.mostrarMensaje());
+
+                    Autor autor1 = new Autor("Pepe", "Argento", "pepe@gmail.com", 'M');
+                    Autor autor2 = new Autor("Sancho", "Panza", "panza@hotmail.com", 'M');
+
+                    autores[1] = autor1;
+                    autores[2] = autor2;
+
+                    Libro libro1 = new Libro("Effective Java", 500, 200, autores);
+                    show.println(libro1);
 
                     Pausa.pausar();
                     limpiarPantalla();
@@ -82,7 +113,7 @@ public class Main {
     }
 
     public static void limpiarPantalla() {
-        for(int i=0;i<10;i++) {
+        for(int i=0;i<20;i++) {
             show.println("\n");
         }
     }
