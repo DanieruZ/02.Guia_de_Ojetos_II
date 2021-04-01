@@ -1,5 +1,3 @@
-package guia_02;
-
 /****************************************************************
  *
  * 1. Es necesario modelar el objeto de tipo Libro con las siguientes caracteristicas, titulo,
@@ -23,6 +21,8 @@ package guia_02;
  *         mensaje que liste los autores que contribuyeron a ese libro.
  *
  ***************************************************************/
+
+package guia_02;
 
 public class Autor {
 
@@ -55,3 +55,4 @@ public class Autor {
                 "\nGenero:...... " + this.genero;
     }
 }
+

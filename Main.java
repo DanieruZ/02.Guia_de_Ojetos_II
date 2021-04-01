@@ -62,6 +62,27 @@ public class Main {
                     show.println("  -------------------");
                     show.println("\n");
 
+                    Cliente cliente = new Cliente("Bruno", "bruno@gmail.com", 25);
+                    ItemVenta[] items = new ItemVenta[3];
+                    show.println(cliente.toString());
+
+                    show.println("-------------------------------------------");
+
+                    ItemVenta item = new ItemVenta("Medialunas", "Facturas dulces", 40, 12);
+                    ItemVenta item1 = new ItemVenta("Medialunas", "Facturas saladas", 45, 12);
+                    ItemVenta item2 = new ItemVenta("Churros", "Churros con dulce de leche", 50, 12);
+
+                    items[0] = item;
+                    items[1] = item1;
+                    items[2] = item2;
+
+                    Factura factura = new Factura(cliente, items);
+                    show.println(factura);
+
+                    System.out.println("Monto Total de compra: " + factura.calcularMontoTotal());
+                    System.out.println("Monto Total de compra con 25% Descuento: " + factura.calcularDescuentoTotal());
+
+                    show.println("-------------------------------------------");
 
                     Pausa.pausar();
                     limpiarPantalla();
@@ -130,3 +151,4 @@ public class Main {
         }
     }
 }
+

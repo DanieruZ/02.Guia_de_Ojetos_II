@@ -1,7 +1,3 @@
-package guia_02;
-
-import java.util.Arrays;
-
 /****************************************************************
  *
  * 1. Es necesario modelar el objeto de tipo Libro con las siguientes caracteristicas, titulo,
@@ -25,6 +21,10 @@ import java.util.Arrays;
  *         mensaje que liste los autores que contribuyeron a ese libro.
  *
  ***************************************************************/
+
+package guia_02;
+
+import java.util.Arrays;
 
 public class Libro {
 
