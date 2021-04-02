@@ -93,6 +93,25 @@ public class Main {
                     show.println("  -------------------");
                     show.println("\n");
 
+                    Titular titular = new Titular("King Kong", 'M' );
+                    show.println(titular);
+
+                    show.println("\n-------------------------------");
+
+                    Cuenta cuenta = new Cuenta(10000, titular);
+                    show.println(cuenta);
+
+                    show.println("Extracciones & Depositos: \n");
+                    show.println("Extraccion valor:... $2300" + " --- " + "Balance actual: $" + cuenta.extraerDinero(2300));
+                    show.println("Extraccion valor:... $855.7" + " -- " + "Balance actual: $" + cuenta.extraerDinero(855.7));
+                    show.println("Extraccion valor:... $547.3" + " -- " + "Balance actual: $" + cuenta.extraerDinero(547.3));
+                    show.println("Deposito valor:..... $1500" + " --- " + "Balance actual: $" + cuenta.depositarDinero(1500));
+                    show.println("Deposito valor:..... $1000" + " --- " + "Balance actual: $" + cuenta.depositarDinero(1000));
+
+                    show.println("\nTotal operaciones realizadas: \n");
+                    for(String i : cuenta.getOperaciones()) {
+                        if(i != null) show.println(i);
+                    }
 
                     Pausa.pausar();
                     limpiarPantalla();
@@ -151,4 +170,3 @@ public class Main {
         }
     }
 }
-
