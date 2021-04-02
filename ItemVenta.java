@@ -59,10 +59,11 @@ public class ItemVenta {
 
     @Override
     public String toString() {
-        return  "\nID:............. " + this.id +
-                "\nNombre:......... " + this.nombre +
-                "\nDescripcion:.... " + this.descripcion +
-                "\nCantidad:....... " + this.cantidad + "\n";
+        return  "\nID:................. " + this.id +
+                "\nNombre:............. " + this.nombre +
+                "\nDescripcion:........ " + this.descripcion +
+                "\nPrecio Unitario:.... " + this.precioUnitario +
+                "\nCantidad:........... " + this.cantidad + "\n";
 
     }
 }
