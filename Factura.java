@@ -56,20 +56,16 @@ public class Factura {
 
     public double calcularMontoTotal() {
         double total = 0;
-        for (ItemVenta i : items) {
-            if (i != null) {
-                total += i.montoTotal();
-            }
+        for(ItemVenta i : items) {
+            if(i != null) total += i.montoTotal();
         }
         return total;
     }
 
     public double calcularDescuentoTotal() {
         double total = 0;
-        for (ItemVenta i : items) {
-            if (i != null) {
-                total += i.montoTotal();
-            }
+        for(ItemVenta i : items) {
+            if(i != null) total += i.montoTotal();
         }
         return total - ((total * cliente.getDescuento()) / 100);
     }
